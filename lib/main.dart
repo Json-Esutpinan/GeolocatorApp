@@ -2,7 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:geolocator_bar_app/screens/HomePage.dart';
-import 'package:geolocator_bar_app/screens/login_page.dart';
+import 'package:geolocator_bar_app/screens/LoginPage.dart';
 import 'package:geolocator_bar_app/screens/RegisterPage.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
