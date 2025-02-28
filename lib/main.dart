@@ -3,6 +3,7 @@ import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:geolocator_bar_app/screens/HomePage.dart';
 import 'package:geolocator_bar_app/screens/LoginPage.dart';
+import 'package:geolocator_bar_app/screens/RecoveryPage.dart';
 import 'package:geolocator_bar_app/screens/RegisterPage.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/maps': (context) => HomePage(),
         '/login': (context) => LoginPage(users: users),
         '/register': (context) => RegisterPage(users: users),
+        '/recovery': (context) => RecoveryPage(),
       },
       title: 'Geolocator Bars App',
       home: LoginPage(users: HashMap<String, String>()),

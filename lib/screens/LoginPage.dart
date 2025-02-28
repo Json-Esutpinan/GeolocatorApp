@@ -26,6 +26,44 @@ class _LoginPage extends State<LoginPage> {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              /* Image.asset('assets/th.jpeg'), */
+              SizedBox(height: 20),
+              _loginForm(context),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/register');
+                    },
+                    child: Text("Registrarse"),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/recovery');
+                    },
+                    child: Text("Recuperar contraseña"),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  /*   Widget build(BuildContext context) {
+    widget.users['jeison@poligran.edu.co'] = 'password1';
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: CustomAppBar(),
+      body: SafeArea(
+        child: Center(
+          child: Column(
             children: [
               _loginForm(context),
               ElevatedButton(
@@ -39,7 +77,7 @@ class _LoginPage extends State<LoginPage> {
         ),
       ),
     );
-  }
+  } */
 
   void _isValidUser(String user, String password) {
     if (widget.users.containsKey(user) && widget.users[user] == password) {
